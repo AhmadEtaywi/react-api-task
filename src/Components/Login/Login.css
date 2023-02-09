@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background-color: #fff;
+    /* display: flex; */
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.wrapper {
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    margin-top: 150px;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.Log-in-text{
+    font-family: 'Comfortaa';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 40px;
+display: flex;
+align-items: center;
+letter-spacing: -0.015em;
+
+color: #000000;
+padding-bottom: 32px;
+padding-right: 14rem;
+}
+.password-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.strong-text {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+
+    color: #000000;
+
+}
+
+#email {
+    Width: 343px;
+    Height: 52px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+}
+
+#pass {
+    Width: 343px;
+    Height: 52px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+}
+
+#btn1 {
+    color: white;
+    Width: 343px;
+    Height: 52px;
+    background: #000000;
+    border: 2px solid #000000;
+    border-radius: 6px;
+}
+
+
+
+.test1 {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    gap: 15px;
+}
+
+
+
