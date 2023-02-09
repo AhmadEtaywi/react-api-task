@@ -11,6 +11,23 @@ function Dashboard() {
   const [comments, setComments] = useState([]);
   const [newPost, setNewPost] = useState([]);
 
+
+function posted(){
+const b = document.querySelector('.add-post-btn')
+    const l = document.querySelector('.addPost-text')
+    if (l.style.display === "none") {
+      l.style.display = "block"
+      b.style.display = "block"
+    }
+    else {
+      l.style.display = "none";
+      b.style.display = "none";
+    }
+
+  }
+
+
+
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   
   useEffect(() => {
@@ -49,6 +66,13 @@ function Dashboard() {
     };
     setPosts([newPost1, ...posts]);
     setNewPost('');
+
+
+    posted()
+
+
+
+
   };
 
   const showComments = (postId) => {
@@ -59,6 +83,7 @@ function Dashboard() {
   }
   return (
     <>
+    <div className="Discover-page">
       <div className="Discover">
         <p >Discover</p>
         <p>WHAT'S NEW TODAY</p>
@@ -97,41 +122,31 @@ function Dashboard() {
                 ))}
               {/* text area for comments */}
               <textarea
-                className="textarea15"
+                className="comment-textarea"
                 placeholder="Add Comment"
                 onKeyPress={e => handleKeyPress(e, post.id)}
               />
             </div>
           ))}
 
-          <img alt="" onClick={
-          () => {
-            const b = document.querySelector('.test-btn')
-            const l = document.querySelector('.addPost-text')
-            if (l.style.display === "none") {
-              l.style.display = "block"
-              b.style.display = "block"
-            }
-            else {
-              l.style.display = "none";
-              b.style.display = "none";
-            }
-          }
-        }
+          <img alt="" onClick={posted}
           src={TabBar} className="tab-bar" />
 
       </div>
 
+      
+
       <div className="newPost-Container">
-        <textarea hidden className="addPost-text"
+        <textarea style={{ display:'none'}} className="addPost-text"
           rows="5" cols="33"
           type="textarea"
           placeholder="Enter new post"
           value={newPost}
           onChange={e => setNewPost(e.target.value)}
         />
-        <button hidden className="test-btn" onClick={addNewPost}>Add post</button>
-      </div>
+        <button style={{ display:'none'}} className="add-post-btn" onClick={addNewPost}>Add post</button>
+       </div>
+       </div>
     </>
   );
 };

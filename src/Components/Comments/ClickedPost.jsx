@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
 import Ellipse from '../Dashboard/imgs/Ellipse.png'
+import './ClickedPost.css'
 
 function ClickedPost(){
     const postId = new URLSearchParams(window.location.search).get("postId");

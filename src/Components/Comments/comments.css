@@ -1,63 +1,19 @@
+.Comment-Discover{
+    padding-left: 35rem;
+    padding-top: 3rem;
+}
 
-.Discover{
-    padding: 5rem 0;
+
+.Comment-Discover1{
+    padding: 2rem 20rem 5rem 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
-
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
     line-height: 40px;
     letter-spacing: -0.015em;
-    
     color: #000000;
-}
-
-
-.comments-post{
-    /* margin-top: 10rem; */
-    margin-bottom: 7rem;
-}
-.post-body{
-    width: 75%;
-}
-.showComments1{
-    padding-left: 3rem;
-}
-.comments-id{
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-}
-
-.comments-id-2{
-    display: flex;
-    flex-direction: column;
-}
-
-.h6-comment{
-    width: 50%;
-margin-top: 2rem;  
-margin-bottom: 2rem;  
-}
-
-.comments-img{
-    width: 30px;
-    height: 30px;
-}
-
-
-.selectedPost-id{
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    padding-bottom: 2rem;
-}
-
-.selectedPost-id-2{
-    display: flex;
-    flex-direction: column;
 }

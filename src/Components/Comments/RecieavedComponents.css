@@ -1,0 +1,45 @@
+
+.post-body{
+    width: 50%;
+}
+
+.comments-post{
+    margin-bottom: 7rem;
+}
+.showComments1{
+    padding-left: 2rem;
+}
+.comments-id{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.comments-id-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.h6-comment{
+    width: 50%;
+margin-top: 2rem;  
+margin-bottom: 2rem;  
+}
+
+.comments-img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.selectedPost-id{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+.selectedPost-id-2{
+    display: flex;
+    flex-direction: column;
+}
