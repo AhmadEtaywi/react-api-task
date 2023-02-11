@@ -34,7 +34,7 @@ align-items: center;
 .newPost-Container{
     position: fixed;
     bottom: 5rem;
-    margin-left: 6rem;
+    margin-right: 5.5rem;
 }
 
 .addPost-text{
