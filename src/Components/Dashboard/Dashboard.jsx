@@ -12,6 +12,14 @@ function Dashboard() {
   const [newPost, setNewPost] = useState([]);
 
 
+  const [searchValue, setSearchValue] = useState('');
+  const [displayCount, setDisplayCount] = useState(5);
+
+
+  const handleLoadMore = () => {
+    setDisplayCount(displayCount + 5);
+  };
+
 function posted(){
 const b = document.querySelector('.add-post-btn')
     const l = document.querySelector('.addPost-text')
@@ -83,6 +91,10 @@ const b = document.querySelector('.add-post-btn')
   }
   return (
     <>
+
+{/* 213123123213 */}
+
+    {/* 23213213123 */}
     <div className="Discover-page">
       <div className="Discover">
         <p >Discover</p>
@@ -90,10 +102,17 @@ const b = document.querySelector('.add-post-btn')
       </div>
 
       <div className="test1">
-        {posts
-          .map((post, index) => (
 
-            <div key={Math.random()} className="inner-div">
+      <div className="search-container">
+          <input className="search-bar" type="text" placeholder="Search Posts" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
+        </div>
+
+        {posts
+                  .filter(post => post.body.toLowerCase().includes(searchValue.toLowerCase()))
+                  .slice(0, displayCount)
+                  .map((post, index) => (
+                    
+                    <div key={Math.random()} className="inner-div">
               <div className="inner-div-2">
                 <div className="post-id">
                   <img alt="" src={Ellipse} className="pro-img-class" />
@@ -127,7 +146,13 @@ const b = document.querySelector('.add-post-btn')
                 onKeyPress={e => handleKeyPress(e, post.id)}
               />
             </div>
-          ))}
+          )
+          )
+        }
+        <div>
+
+        <button className="show-more" onClick={handleLoadMore}>Show More</button>
+        </div>
 
           <img alt="" onClick={posted}
           src={TabBar} className="tab-bar" />
